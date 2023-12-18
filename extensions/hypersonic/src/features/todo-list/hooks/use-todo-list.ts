@@ -300,7 +300,7 @@ export function useTodoList() {
     let dateValue = null
     let contentUrl = null
     let status =
-      statuses && statuses.length > 0 ? statuses[statuses.length - 1] : null
+      statuses && statuses.length > 0 ? statuses.filter(s => s.default)[0] : null
 
     const projectMatch = text.match(/ #(\w+)/)
     const userMatch = text.match(/ @(\w+)/)

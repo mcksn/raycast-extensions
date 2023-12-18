@@ -32,6 +32,7 @@ export const normalizeStatus = (
   return {
     ...status,
     icon,
+    default: !status.color || status.color === 'default',
     color,
   }
 }
